@@ -33,13 +33,25 @@ html{
 }
 
 .header__logo-img{
-  border: 0px solid red;
+  border: 2px solid rgb(245, 239, 239);
+  opacity: 0.6;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   -webkit-border-radius: 50%;
+}
+.header__logo-img:hover{
+  border: 2px solid  rgb(245, 239, 239);
+  box-shadow:var(--box-shadow);
+  opacity: 1;
+  background: transparent;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
 }
 
 .header__nav{
