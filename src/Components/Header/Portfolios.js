@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './Product';
+import logo from '../../logo.svg';
 class Portfolios extends React.Component {
   constructor(props) {
     super(props);
@@ -53,11 +54,16 @@ class Portfolios extends React.Component {
   render() {
     const listProduct = this.state.listProduct;
     return (
+      <>
+        <div className="content__title">
+          <p>NEW PRODUCTS</p>
+        </div>
         <div className="content__item">
           {listProduct.map((product) => (
-        <Product product={product} key={product.id} />
-        ))}
+            <Product product={product} key={product.id} />
+          ))}
         </div>
+      </>
     );
   }
 }
