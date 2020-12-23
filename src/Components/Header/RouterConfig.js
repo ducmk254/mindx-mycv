@@ -8,7 +8,7 @@ import Contact from './Contact';
 
  const RouterConfig =  {
    menu: [
-    {id:1,path: '/', description: 'Home', component: Home, name: 'home'},
+    {id:1,path: '/', description: 'Home', component: Home, name: 'home', exact: true},
     {id:2,path: '/about', description: 'About', component: About, name: 'about'},
     {id:3,path: '/resume', description: 'Resume', component: Resume,name: 'resume'},
     {id:4,
