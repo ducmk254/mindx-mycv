@@ -9,42 +9,42 @@ class Portfolios extends React.Component {
         {
           id: 1,
           src:
-            'http://preview.hasthemes.com/coron-v4/coron/assets/img/product/product1.jpg',
+            '/images/products/product1.jpg',
           price: '50',
           name: 'CURABITUR SODALES',
         },
         {
           id: 2,
           src:
-            'http://preview.hasthemes.com/coron-v4/coron/assets/img/product/product1.jpg',
+            '/images/products/product1.jpg',
           price: '500',
           name: 'CURABITUR SODALES',
         },
         {
           id: 3,
           src:
-            'http://preview.hasthemes.com/coron-v4/coron/assets/img/product/product1.jpg',
+            '/images/products/product1.jpg',
           price: '5023',
           name: 'CURABITUR SODALES',
         },
         {
           id: 4,
           src:
-            'http://preview.hasthemes.com/coron-v4/coron/assets/img/product/product1.jpg',
+            '/images/products/product1.jpg',
           price: '550',
           name: 'CURABITUR SODALES',
         },
         {
           id: 5,
           src:
-            'http://preview.hasthemes.com/coron-v4/coron/assets/img/product/product1.jpg',
+            '/images/products/product1.jpg',
           price: '560',
           name: 'CURABITUR SODALES',
         },
         {
           id: 6,
           src:
-            'http://preview.hasthemes.com/coron-v4/coron/assets/img/product/product1.jpg',
+            '/images/products/product1.jpg',
           price: '5000',
           name: 'CURABITUR SODALES',
         },

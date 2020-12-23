@@ -19,7 +19,7 @@ import Contact from './Contact';
     {id:5,path: '/blogs', description: 'Blogs', component: Blogs},
     {id:6,path: '/contact', description: 'Contact', component: Contact}
   ],
-  logolink: 'https://picsum.photos/150',
+  logolink: '/images/logo/logo100.jpg',
   myinformation: ["https://www.facebook.com/iphonedocnd","https://github.com/ducmk254"]
 }
 export default ConfigMenu;
