@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 
-import ConfigMenu from './ConfigMenu';
+import RouterConfig from './RouterConfig';
 import Logo from './Logo';
 // import Home from './Home';
 // import About from './About';
@@ -21,28 +21,25 @@ class Main extends React.Component {
 
   render() {
     // const menu = this.state.menu;
-    let menu = ConfigMenu.menu;
+    let menu = RouterConfig.menu;
     let links = [
       ...menu,
       {id: 404, path: '/404', description: 'Not Found', component: NotFound},
     ];
     let product = {
       id: 1,
-      src: 'http://preview.hasthemes.com/coron-v4/coron/assets/img/product/product1.jpg',
+      src:
+        'http://preview.hasthemes.com/coron-v4/coron/assets/img/product/product1.jpg',
       price: '50',
-      name:'CURABITUR SODALES'
-    }
+      name: 'CURABITUR SODALES',
+    };
     return (
       <BrowserRouter>
         <div className="header">
-          <Logo link={ConfigMenu.logolink} />
+          <Logo link={RouterConfig.logolink} />
           <ul className="header__nav">
             {menu.map((item) => (
-              <Link
-                key={item.id}
-                to={item.path}
-                className="header__nav-item"
-              >
+              <Link key={item.id} to={item.path} className="header__nav-item">
                 <li>{item.description}</li>
               </Link>
             ))}
@@ -50,18 +47,17 @@ class Main extends React.Component {
         </div>
         <div className="content">
           <Switch>
-              {links.map((item) =>
-                item.path === '/' ? (
-                  <Route
-                    exact
-                    path={item.path}
-                    component={item.component}
-                  ></Route>
-                ) : (
-                  <Route path={item.path} component={item.component}></Route>
-                )
-              )}
-            
+            {links.map((item) =>
+              item.path === '/' ? (
+                <Route
+                  exact
+                  path={item.path}
+                  component={item.component}
+                ></Route>
+              ) : (
+                <Route path={item.path} component={item.component}></Route>
+              )
+            )}
           </Switch>
         </div>
       </BrowserRouter>
