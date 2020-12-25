@@ -6,7 +6,7 @@ class Product extends React.Component {
   render() {
       const { product} = this.props;
     return (
-      <div className="product" key={product.id}>
+      <div className="product" key={product._id}>
         <div className="product__item">
           <div className="product__item-header">
             <a className="product__item-link" href="#">

@@ -1,55 +1,23 @@
 import React from 'react';
 import Product from './Product';
-import logo from '../../logo.svg';
+import axios from 'axios';
 class Portfolios extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      listProduct: [
-        {
-          id: 1,
-          src:
-            '/images/products/product1.jpg',
-          price: '50',
-          name: 'CURABITUR SODALES',
-        },
-        {
-          id: 2,
-          src:
-            '/images/products/product1.jpg',
-          price: '500',
-          name: 'CURABITUR SODALES',
-        },
-        {
-          id: 3,
-          src:
-            '/images/products/product1.jpg',
-          price: '5023',
-          name: 'CURABITUR SODALES',
-        },
-        {
-          id: 4,
-          src:
-            '/images/products/product1.jpg',
-          price: '550',
-          name: 'CURABITUR SODALES',
-        },
-        {
-          id: 5,
-          src:
-            '/images/products/product1.jpg',
-          price: '560',
-          name: 'CURABITUR SODALES',
-        },
-        {
-          id: 6,
-          src:
-            '/images/products/product1.jpg',
-          price: '5000',
-          name: 'CURABITUR SODALES',
-        },
-      ],
+      listProduct: [],
     };
+  }
+  componentDidMount() {
+    axios
+      .get(`http://localhost:3001/api/v0/products`)
+      .then((res) => {
+        let products = res.data.listproduct;
+        this.setState({listProduct: products});
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
   render() {
     const listProduct = this.state.listProduct;

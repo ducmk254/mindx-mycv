@@ -10,13 +10,12 @@ import Logo from './Logo';
 // import Blogs from './Blogs';
 // import Contact from './Contact';
 import NotFound from './NotFound';
-
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   menu: ConfigMenu,
-    // };
+    this.state = {
+      product: [],
+    };
   }
 
   render() {
@@ -24,15 +23,9 @@ class Main extends React.Component {
     let menu = RouterConfig.menu;
     let links = [
       ...menu,
-      {id: 404, path: '/404', description: 'Not Found', component: NotFound},
+      {id: 404, path: '*', description: 'Not Found', component: NotFound},
     ];
-    let product = {
-      id: 1,
-      src:
-        'http://preview.hasthemes.com/coron-v4/coron/assets/img/product/product1.jpg',
-      price: '50',
-      name: 'CURABITUR SODALES',
-    };
+
     return (
       <BrowserRouter>
         <div className="header">
